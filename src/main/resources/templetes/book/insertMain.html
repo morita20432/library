@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>入力画面</title>
+</head>
+<body>
+<h1>本の名前を入力してください</h1>
+<form method="post" action="index.html" th:action="@{insertComplete}">
+    <table>
+        <tr>
+            <th>ID</th>
+            <td><input type="text" name="id"></td>
+        </tr>
+        <tr>
+            <th>書籍名</th>
+            <td><input type="text" name="name"></td>
+        </tr>
+        <tr>
+            <th>価格</th>
+            <td><input type="text" name="price"></td>
+        </tr>
+        <tr>
+            <th>カテゴリID</th>
+            <td><input type="text" name="price"></td>
+        </tr>
+    </table>
+    <button>登録</button>
+</form>
+</body>
+</html>

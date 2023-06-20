@@ -1,0 +1,10 @@
+version: "3.9"
+
+services:
+  postgresql:
+    container_name: postgres-library
+    image: postgres:14.3
+    ports:
+      - "5432:5432"
+    environment:
+      - POSTGRES_PASSWORD=library
