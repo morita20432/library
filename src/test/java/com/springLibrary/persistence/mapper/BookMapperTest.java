@@ -33,7 +33,7 @@ public class BookMapperTest {
     @Test
     @DisplayName("書籍名のキーワードで検索した場合、一致した書籍名を持つ本が取得できる")
     void findByNameLikeTest() {
-        List<Book> bookList = bookMapper.findByNameLike("弱虫ペダル");
+        List<Book> bookList = bookMapper.findByNameLike("%弱虫ペダル%");
         assertEquals(6, bookList.size());
     }
 

@@ -31,8 +31,9 @@ public interface BookMapper {
     List<Book> findByNameLike(String keyword);
 
     @Insert("""
-            INSERT INTO book(name,price,category_id)
-            VALUES(#{name}, #{price}, #{categoryId}"""
+            INSERT INTO book(id,name,price)
+            VALUES(#{id}, #{name}, #{price})
+            """
     )
     @Options(useGeneratedKeys = true, keyColumn = "id", keyProperty = "id")
     void insert(Book book);
