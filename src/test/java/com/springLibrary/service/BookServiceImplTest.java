@@ -40,7 +40,7 @@ public class BookServiceImplTest {
     @Test
     @DisplayName("findByNameLikeで一致した本を取得")
     void findByNameLikeTest() {
-        when(bookMapper.findByNameLike("弱虫ペダル")).thenReturn(List.of(
+        when(bookMapper.findByNameLike("%弱虫ペダル%")).thenReturn(List.of(
                 new Book(1, "弱虫ペダル1", 500),
                 new Book(2, "弱虫ペダル2", 500),
                 new Book(3, "弱虫ペダル3", 500)
@@ -48,7 +48,7 @@ public class BookServiceImplTest {
 
         List<Book> bookList = bookService.findByNameLike("%弱虫ペダル%");
         assertEquals(3, bookList.size());
-        verify(bookMapper, times(1)).findByNameLike("弱虫ペダル");
+        verify(bookMapper, times(1)).findByNameLike("%弱虫ペダル%");
     }
 
     @Test
