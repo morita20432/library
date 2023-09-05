@@ -32,7 +32,7 @@ public class BookController {
 
     @GetMapping("/findByNameLike")
     public String findByNameLike(@RequestParam String keyword, Model model) {
-        List<Book> bookList = bookService.findByNameLike(keyword);
+        List<Book> bookList = bookService.findByNameLike("%" + keyword + "%");
         model.addAttribute("bookList", bookList);
         return "book/index";
     }

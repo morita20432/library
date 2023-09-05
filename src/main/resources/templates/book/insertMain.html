@@ -2,10 +2,13 @@
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
-    <title>入力画面</title>
+    <title>新規追加画面</title>
+    <link rel="stylesheet" href="../../static/css/style.css"
+          th:href="@{/css/style.css}">
 </head>
 <body>
 <h1>本の名前を入力してください</h1>
+<a href="index.html" th:href="@{index}">書籍一覧へ</a>
 <form method="post" action="index.html" th:action="@{insertComplete}">
     <table>
         <tr>
@@ -22,7 +25,7 @@
         </tr>
         <tr>
             <th>カテゴリID</th>
-            <td><input type="text" name="price"></td>
+            <td><input type="text" name="categoryId"></td>
         </tr>
     </table>
     <button>登録</button>

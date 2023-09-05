@@ -12,6 +12,7 @@
     書籍名キーワード: <input type="text" name="keyword">
     <button>書籍名キーワード検索</button>
 </form>
+<a href="insertMain.html" th:href="@{insertMain}">書籍の新規追加</a>
 <table>
     <tr>
         <th>ID</th>
@@ -20,7 +21,7 @@
         <th>カテゴリID</th>
         <th>カテゴリ名</th>
     </tr>
-    <tr th:each="employee : ${employeeList}" th:object="${employee}">
+    <tr th:each="book : ${bookList}" th:object="${book}">
         <td th:text="*{id}">101</td>
         <td th:text="*{name}">書籍名テスト</td>
         <td th:text="*{price}">999</td>

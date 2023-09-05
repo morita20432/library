@@ -39,4 +39,20 @@ public class Book {
     public void setPrice(Integer price) {
         this.price = price;
     }
+
+    public Integer getCategoryId() {
+        return categoryId;
+    }
+
+    public void setCategoryId(Integer categoryId) {
+        this.categoryId = categoryId;
+    }
+
+    public Integer getCategoryName() {
+        return categoryName;
+    }
+
+    public void setCategoryName(Integer categoryName) {
+        this.categoryName = categoryName;
+    }
 }
